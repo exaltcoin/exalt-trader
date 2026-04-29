@@ -2,168 +2,132 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dashboard | NeonTrade Pro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard | Exalt Trader</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header class="navbar">
-    <div class="logo">NeonTrade<span>Pro</span></div>
+<header class="navbar">
+  <a href="index.html" class="logo">
+    <img src="logo.png" alt="Exalt Trader Logo">
+    <span>Exalt Trader</span>
+  </a>
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="dashboard.html" class="active">Dashboard</a>
-      <a href="signals.html">Signals</a>
-      <a href="login.html" class="nav-btn">Login</a>
-    </nav>
-  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="dashboard.html" class="active">Dashboard</a>
+    <a href="signals.html">Signals</a>
+    <a href="login.html" class="nav-btn">Login</a>
+  </nav>
+</header>
 
-  <main class="dashboard">
+<main class="dashboard">
 
-    <section class="dashboard-header">
-      <div>
-        <p class="badge">Binance Style Trading Panel</p>
-        <h1>Crypto Dashboard</h1>
-        <p>Live prices, portfolio summary, market trend, and quick stats.</p>
-      </div>
+  <section class="dashboard-header">
+    <div>
+      <p class="badge">Binance Style Trading Panel</p>
+      <h1>Crypto Dashboard</h1>
+      <p>Live prices, portfolio summary, market trend and quick trading stats.</p>
+    </div>
 
-      <a href="signals.html" class="btn primary">View Signals</a>
-    </section>
+    <a href="signals.html" class="btn primary">View Signals</a>
+  </section>
 
-    <section class="stats-grid">
-      <div class="stat-card">
-        <p>Total Balance</p>
-        <h2>$24,850.75</h2>
-        <span class="green">+12.4%</span>
-      </div>
+  <section class="stats-grid">
+    <div class="stat-card">
+      <p>Total Balance</p>
+      <h2>$24,850.75</h2>
+      <span class="green">+12.4%</span>
+    </div>
 
-      <div class="stat-card">
-        <p>Today Profit</p>
-        <h2>$1,240.30</h2>
-        <span class="green">+5.8%</span>
-      </div>
+    <div class="stat-card">
+      <p>Today Profit</p>
+      <h2>$1,240.30</h2>
+      <span class="green">+5.8%</span>
+    </div>
 
-      <div class="stat-card">
-        <p>Open Trades</p>
-        <h2>08</h2>
-        <span class="yellow">Active</span>
-      </div>
+    <div class="stat-card">
+      <p>Open Trades</p>
+      <h2>08</h2>
+      <span class="yellow">Active</span>
+    </div>
 
-      <div class="stat-card">
-        <p>Risk Level</p>
-        <h2>Medium</h2>
-        <span class="red">Manage Risk</span>
-      </div>
-    </section>
+    <div class="stat-card">
+      <p>Risk Level</p>
+      <h2>Medium</h2>
+      <span class="red">Manage Risk</span>
+    </div>
+  </section>
 
-    <section class="dashboard-grid">
+  <section class="dashboard-grid">
 
-      <div class="panel large-panel">
-        <div class="panel-title">
-          <h3>Market Chart</h3>
-          <span>BTC / USDT</span>
-        </div>
-
-        <div class="fake-chart">
-          <div style="height: 40%"></div>
-          <div style="height: 65%"></div>
-          <div style="height: 35%"></div>
-          <div style="height: 80%"></div>
-          <div style="height: 55%"></div>
-          <div style="height: 90%"></div>
-          <div style="height: 50%"></div>
-          <div style="height: 75%"></div>
-          <div style="height: 60%"></div>
-          <div style="height: 85%"></div>
-        </div>
-      </div>
-
-      <div class="panel">
-        <div class="panel-title">
-          <h3>Live Prices</h3>
-          <span>Auto Update</span>
-        </div>
-
-        <div class="price-list">
-          <div class="price-row">
-            <span>BTC</span>
-            <strong id="dash-btc">$--</strong>
-          </div>
-
-          <div class="price-row">
-            <span>ETH</span>
-            <strong id="dash-eth">$--</strong>
-          </div>
-
-          <div class="price-row">
-            <span>BNB</span>
-            <strong id="dash-bnb">$--</strong>
-          </div>
-
-          <div class="price-row">
-            <span>SOL</span>
-            <strong id="dash-sol">$--</strong>
-          </div>
-        </div>
-      </div>
-
-    </section>
-
-    <section class="panel">
+    <div class="panel large-panel">
       <div class="panel-title">
-        <h3>Portfolio Assets</h3>
-        <span>Your Holdings</span>
+        <h3>Market Chart</h3>
+        <span>BTC / USDT</span>
       </div>
 
-      <table class="crypto-table">
-        <thead>
-          <tr>
-            <th>Coin</th>
-            <th>Amount</th>
-            <th>Value</th>
-            <th>Change</th>
-          </tr>
-        </thead>
+      <div class="fake-chart">
+        <div style="height:40%"></div>
+        <div style="height:65%"></div>
+        <div style="height:35%"></div>
+        <div style="height:80%"></div>
+        <div style="height:55%"></div>
+        <div style="height:90%"></div>
+        <div style="height:50%"></div>
+        <div style="height:75%"></div>
+        <div style="height:60%"></div>
+        <div style="height:85%"></div>
+      </div>
+    </div>
 
-        <tbody>
-          <tr>
-            <td>Bitcoin</td>
-            <td>0.25 BTC</td>
-            <td>$16,250</td>
-            <td class="green">+3.2%</td>
-          </tr>
+    <div class="panel">
+      <div class="panel-title">
+        <h3>Live Prices</h3>
+        <span>Auto Update</span>
+      </div>
 
-          <tr>
-            <td>Ethereum</td>
-            <td>2.40 ETH</td>
-            <td>$7,180</td>
-            <td class="green">+2.1%</td>
-          </tr>
+      <div class="price-list">
+        <div class="price-row"><span>BTC</span><strong id="dash-btc">$--</strong></div>
+        <div class="price-row"><span>ETH</span><strong id="dash-eth">$--</strong></div>
+        <div class="price-row"><span>BNB</span><strong id="dash-bnb">$--</strong></div>
+        <div class="price-row"><span>SOL</span><strong id="dash-sol">$--</strong></div>
+      </div>
+    </div>
 
-          <tr>
-            <td>BNB</td>
-            <td>5.80 BNB</td>
-            <td>$1,420</td>
-            <td class="red">-1.4%</td>
-          </tr>
+  </section>
 
-          <tr>
-            <td>Solana</td>
-            <td>18 SOL</td>
-            <td>$2,250</td>
-            <td class="green">+4.8%</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+  <section class="panel">
+    <div class="panel-title">
+      <h3>Portfolio Assets</h3>
+      <span>Your Holdings</span>
+    </div>
 
-  </main>
+    <table class="crypto-table">
+      <thead>
+        <tr>
+          <th>Coin</th>
+          <th>Amount</th>
+          <th>Value</th>
+          <th>Change</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Bitcoin</td><td>0.25 BTC</td><td>$16,250</td><td class="green">+3.2%</td></tr>
+        <tr><td>Ethereum</td><td>2.40 ETH</td><td>$7,180</td><td class="green">+2.1%</td></tr>
+        <tr><td>BNB</td><td>5.80 BNB</td><td>$1,420</td><td class="red">-1.4%</td></tr>
+        <tr><td>Solana</td><td>18 SOL</td><td>$2,250</td><td class="green">+4.8%</td></tr>
+      </tbody>
+    </table>
+  </section>
 
-  <footer>
-    <p>© 2026 NeonTrade Pro. All rights reserved.</p>
-  </footer>
+</main>
 
-  <script src="script.js"></script>
+<footer>
+  <p>© 2026 Exalt Trader. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
