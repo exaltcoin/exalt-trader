@@ -2,111 +2,110 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Signals | NeonTrade Pro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Signals | Exalt Trader</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header class="navbar">
-    <div class="logo">NeonTrade<span>Pro</span></div>
+<header class="navbar">
+  <a href="index.html" class="logo">
+    <img src="logo.png" alt="Exalt Trader Logo">
+    <span>Exalt Trader</span>
+  </a>
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="dashboard.html">Dashboard</a>
-      <a href="signals.html" class="active">Signals</a>
-      <a href="login.html" class="nav-btn">Login</a>
-    </nav>
-  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="signals.html" class="active">Signals</a>
+    <a href="login.html" class="nav-btn">Login</a>
+  </nav>
+</header>
 
-  <main class="signals-page">
+<main class="signals-page">
 
-    <section class="dashboard-header">
-      <div>
-        <p class="badge">VIP Crypto Signals</p>
-        <h1>Trading Signals Panel</h1>
-        <p>Buy/Sell signals with entry price, targets, stop loss, and risk level.</p>
+  <section class="dashboard-header">
+    <div>
+      <p class="badge">VIP Crypto Signals</p>
+      <h1>Trading Signals Panel</h1>
+      <p>Buy/Sell signals with entry price, targets, stop loss and risk level.</p>
+    </div>
+
+    <a href="dashboard.html" class="btn secondary">Back to Dashboard</a>
+  </section>
+
+  <section class="signals-grid">
+
+    <div class="signal-card buy">
+      <div class="signal-top">
+        <h3>BTC / USDT</h3>
+        <span>BUY</span>
       </div>
+      <p>Entry: $63,800</p>
+      <p>Target 1: $65,200</p>
+      <p>Target 2: $67,000</p>
+      <p>Stop Loss: $62,400</p>
+      <small>Risk: Medium</small>
+    </div>
 
-      <a href="dashboard.html" class="btn secondary">Back to Dashboard</a>
-    </section>
-
-    <section class="signals-grid">
-
-      <div class="signal-card buy">
-        <div class="signal-top">
-          <h3>BTC / USDT</h3>
-          <span>BUY</span>
-        </div>
-
-        <p>Entry: $63,800</p>
-        <p>Target 1: $65,200</p>
-        <p>Target 2: $67,000</p>
-        <p>Stop Loss: $62,400</p>
-        <small>Risk: Medium</small>
+    <div class="signal-card sell">
+      <div class="signal-top">
+        <h3>ETH / USDT</h3>
+        <span>SELL</span>
       </div>
+      <p>Entry: $3,250</p>
+      <p>Target 1: $3,120</p>
+      <p>Target 2: $3,000</p>
+      <p>Stop Loss: $3,340</p>
+      <small>Risk: Low</small>
+    </div>
 
-      <div class="signal-card sell">
-        <div class="signal-top">
-          <h3>ETH / USDT</h3>
-          <span>SELL</span>
-        </div>
-
-        <p>Entry: $3,250</p>
-        <p>Target 1: $3,120</p>
-        <p>Target 2: $3,000</p>
-        <p>Stop Loss: $3,340</p>
-        <small>Risk: Low</small>
+    <div class="signal-card buy">
+      <div class="signal-top">
+        <h3>BNB / USDT</h3>
+        <span>BUY</span>
       </div>
+      <p>Entry: $590</p>
+      <p>Target 1: $615</p>
+      <p>Target 2: $640</p>
+      <p>Stop Loss: $575</p>
+      <small>Risk: Medium</small>
+    </div>
 
-      <div class="signal-card buy">
-        <div class="signal-top">
-          <h3>BNB / USDT</h3>
-          <span>BUY</span>
-        </div>
-
-        <p>Entry: $590</p>
-        <p>Target 1: $615</p>
-        <p>Target 2: $640</p>
-        <p>Stop Loss: $575</p>
-        <small>Risk: Medium</small>
+    <div class="signal-card buy">
+      <div class="signal-top">
+        <h3>SOL / USDT</h3>
+        <span>BUY</span>
       </div>
+      <p>Entry: $142</p>
+      <p>Target 1: $150</p>
+      <p>Target 2: $158</p>
+      <p>Stop Loss: $136</p>
+      <small>Risk: High</small>
+    </div>
 
-      <div class="signal-card buy">
-        <div class="signal-top">
-          <h3>SOL / USDT</h3>
-          <span>BUY</span>
-        </div>
+  </section>
 
-        <p>Entry: $142</p>
-        <p>Target 1: $150</p>
-        <p>Target 2: $158</p>
-        <p>Stop Loss: $136</p>
-        <small>Risk: High</small>
-      </div>
+  <section class="panel">
+    <div class="panel-title">
+      <h3>Signal Rules</h3>
+      <span>Risk Management</span>
+    </div>
 
-    </section>
+    <ul class="rules-list">
+      <li>Never risk more than 2% of your balance on one trade.</li>
+      <li>Always use stop loss.</li>
+      <li>Take partial profit on Target 1.</li>
+      <li>Do not enter late after price already moved too much.</li>
+    </ul>
+  </section>
 
-    <section class="panel">
-      <div class="panel-title">
-        <h3>Signal Rules</h3>
-        <span>Risk Management</span>
-      </div>
+</main>
 
-      <ul class="rules-list">
-        <li>Never risk more than 2% of your balance on one trade.</li>
-        <li>Always use stop loss.</li>
-        <li>Take partial profit on Target 1.</li>
-        <li>Do not enter late after price already moved too much.</li>
-      </ul>
-    </section>
+<footer>
+  <p>© 2026 Exalt Trader. All rights reserved.</p>
+</footer>
 
-  </main>
-
-  <footer>
-    <p>© 2026 NeonTrade Pro. All rights reserved.</p>
-  </footer>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
