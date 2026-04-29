@@ -1,3 +1,4 @@
+
 const apiUrl =
   "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,binancecoin,solana&vs_currencies=usd";
 
