@@ -1,55 +1,97 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Exalt Trader | Crypto Platform</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NeonTrade Pro | Crypto Trading Platform</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header>
-  <h1>Exalt Trader</h1>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#services">Services</a>
-    <a href="#prices">Market</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+  <header class="navbar">
+    <div class="logo">NeonTrade<span>Pro</span></div>
 
-<section id="home" class="hero">
-  <h2>Next-Level Crypto Trading Platform</h2>
-  <p>Real-time market insights, professional signals, and powerful analytics.</p>
-  <button onclick="showMessage()">Start Trading</button>
-</section>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="signals.html">Signals</a>
+      <a href="login.html" class="nav-btn">Login</a>
+    </nav>
+  </header>
 
-<section id="services">
-  <h2>Our Services</h2>
-  <div class="cards">
-    <div class="card">Crypto Trading Signals</div>
-    <div class="card">Market Analysis</div>
-    <div class="card">Portfolio Management</div>
-  </div>
-</section>
+  <section class="hero">
+    <div class="hero-content">
+      <p class="badge">Live Crypto Signals & Market Analytics</p>
+      <h1>Professional Crypto Trading Dashboard</h1>
+      <p class="hero-text">
+        Track live crypto prices, analyze market trends, manage your portfolio,
+        and receive powerful trading signals in one modern platform.
+      </p>
 
-<section id="prices">
-  <h2>Live Crypto Prices</h2>
-  <p id="btc">Bitcoin: Loading...</p>
-  <p id="eth">Ethereum: Loading...</p>
-</section>
+      <div class="hero-buttons">
+        <a href="dashboard.html" class="btn primary">Open Dashboard</a>
+        <a href="signals.html" class="btn secondary">View Signals</a>
+      </div>
+    </div>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: support@exalttrader.com</p>
-  <p>WhatsApp: +965 XXXXXXXX</p>
-</section>
+    <div class="hero-card">
+      <h3>Market Overview</h3>
 
-<footer>
-  <p>© 2026 Exalt Trader. All rights reserved.</p>
-</footer>
+      <div class="coin-row">
+        <span>Bitcoin</span>
+        <strong id="btc-price">$--</strong>
+      </div>
 
-<script src="script.js"></script>
+      <div class="coin-row">
+        <span>Ethereum</span>
+        <strong id="eth-price">$--</strong>
+      </div>
+
+      <div class="coin-row">
+        <span>BNB</span>
+        <strong id="bnb-price">$--</strong>
+      </div>
+
+      <div class="mini-chart">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <h2>Platform Features</h2>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>Live Crypto Prices</h3>
+        <p>Real-time prices for BTC, ETH, BNB, SOL and more.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Trading Signals</h3>
+        <p>Buy/Sell signal panel with entry, target and stop-loss levels.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Portfolio Dashboard</h3>
+        <p>Modern Binance-style dashboard for portfolio tracking.</p>
+      </div>
+
+      <div class="feature-card">
+        <h3>Secure Login UI</h3>
+        <p>Professional login page design for members and traders.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 NeonTrade Pro. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
