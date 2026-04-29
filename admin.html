@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Panel | Exalt Trader</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="navbar">
+  <a href="index.html" class="logo">
+    <img src="logo.png" alt="Exalt Trader Logo">
+    <span>Exalt Trader</span>
+  </a>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="signals.html">Signals</a>
+    <a href="admin.html" class="active">Admin</a>
+  </nav>
+</header>
+
+<main class="dashboard">
+
+  <section class="dashboard-header">
+    <div>
+      <p class="badge">Admin Control Panel</p>
+      <h1>Manage Trading Signals</h1>
+      <p>Add, update and manage crypto signals for your users.</p>
+    </div>
+  </section>
+
+  <section class="dashboard-grid">
+
+    <div class="panel">
+      <div class="panel-title">
+        <h3>Add New Signal</h3>
+        <span>Admin</span>
+      </div>
+
+      <form id="signalForm">
+        <div class="input-group">
+          <label>Coin Pair</label>
+          <input type="text" id="pair" placeholder="BTC / USDT" required>
+        </div>
+
+        <div class="input-group">
+          <label>Signal Type</label>
+          <input type="text" id="type" placeholder="BUY or SELL" required>
+        </div>
+
+        <div class="input-group">
+          <label>Entry Price</label>
+          <input type="text" id="entry" placeholder="$63,800" required>
+        </div>
+
+        <div class="input-group">
+          <label>Target 1</label>
+          <input type="text" id="target1" placeholder="$65,200" required>
+        </div>
+
+        <div class="input-group">
+          <label>Target 2</label>
+          <input type="text" id="target2" placeholder="$67,000" required>
+        </div>
+
+        <div class="input-group">
+          <label>Stop Loss</label>
+          <input type="text" id="stoploss" placeholder="$62,400" required>
+        </div>
+
+        <button type="submit" class="btn primary full">Add Signal</button>
+      </form>
+    </div>
+
+    <div class="panel">
+      <div class="panel-title">
+        <h3>Admin Notes</h3>
+        <span>Important</span>
+      </div>
+
+      <ul class="rules-list">
+        <li>This is frontend admin panel.</li>
+        <li>Signals save in browser local storage.</li>
+        <li>For real users/database, backend is required.</li>
+        <li>Use strong password when backend is added.</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section class="panel">
+    <div class="panel-title">
+      <h3>Added Signals</h3>
+      <span>Live Preview</span>
+    </div>
+
+    <div id="adminSignals" class="signals-grid"></div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 Exalt Trader. All rights reserved.</p>
+</footer>
+
+<script>
+  const form = document.getElementById("signalForm");
+  const adminSignals = document.getElementById("adminSignals");
+
+  function getSignals() {
+    return JSON.parse(localStorage.getItem("signals")) || [];
+  }
+
+  function saveSignals(signals) {
+    localStorage.setItem("signals", JSON.stringify(signals));
+  }
+
+  function renderSignals() {
+    const signals = getSignals();
+    adminSignals.innerHTML = "";
+
+    signals.forEach((signal, index) => {
+      const card = document.createElement("div");
+      card.className = "signal-card " + signal.type.toLowerCase();
+
+      card.innerHTML = `
+        <div class="signal-top">
+          <h3>${signal.pair}</h3>
+          <span>${signal.type}</span>
+        </div>
+        <p>Entry: ${signal.entry}</p>
+        <p>Target 1: ${signal.target1}</p>
+        <p>Target 2: ${signal.target2}</p>
+        <p>Stop Loss: ${signal.stoploss}</p>
+        <button onclick="deleteSignal(${index})" class="btn secondary full">Delete</button>
+      `;
+
+      adminSignals.appendChild(card);
+    });
+  }
+
+  function deleteSignal(index) {
+    const signals = getSignals();
+    signals.splice(index, 1);
+    saveSignals(signals);
+    renderSignals();
+  }
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const signal = {
+      pair: document.getElementById("pair").value,
+      type: document.getElementById("type").value.toUpperCase(),
+      entry: document.getElementById("entry").value,
+      target1: document.getElementById("target1").value,
+      target2: document.getElementById("target2").value,
+      stoploss: document.getElementById("stoploss").value
+    };
+
+    const signals = getSignals();
+    signals.push(signal);
+    saveSignals(signals);
+
+    form.reset();
+    renderSignals();
+  });
+
+  renderSignals();
+</script>
+
+</body>
+</html>
